@@ -10,8 +10,8 @@
 %\date{}																    % Activate to display a given date or no date
 %--------------------------------------------------------------------------------------------------------------------------------------------
 
-\documentclass[11pt, oneside]{article}										% use "amsart" instead of "article" for AMSLaTeX format
-\usepackage{geometry}													    % See geometry.pdf to learn the layout options. There are lots.
+\documentclass[12pt, oneside]{article}										% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[showframe=true]{geometry}													    % See geometry.pdf to learn the layout options. There are lots.
 \geometry{a4paper}														    % ... or a4paper or a5paper or ... 
 \geometry{left=1.5cm,right=1.5cm,top=1cm,bottom=2cm}                        % Set margin of the paper
 \usepackage{graphicx}													    % Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
@@ -28,8 +28,8 @@
         \maketitle														    % Title and author
         \begin{multicols*}{2}
         \twocolumn
-        \begin{abstract}
-            For over a century, fingerprints have been an undisputed        % Start Abstract here
+        \begin{abstract}                                                    % Start Abstract here
+            For over a century, fingerprints have been an undisputed
             personal identifier.  Recent court rulings have sparked
             interest in verifying unique techniques to make the current
             methods even more reliable. Ducks, as they do not have
@@ -41,15 +41,24 @@
             sdfsdjfhjsdhfjhsjkdfhjshdjfhjsdf
             
         \section{Literature Summary}                                        % Start literature summary here
-            hsjdfhjkshdjkfhjksdfsdfasdjhfkas \\
+            kdjfsldjflasdfklasjdfkljaskldfjlkasd
 
-            \begin{tabular} { | c | c | c | }
-                \hline
-                1 & 2 & 3 \\
-                \hline
-                4 & 5 & 6 \\
-                \hline
-            \end{tabular}
+            % \begin{table}
+                \begin{center}
+                \begin{tabular}{ |p{2cm}|p{2cm}|p{2cm}|p{2cm}|  }
+                    \hline
+                    \multicolumn{4}{|c|}{Literature Summary} \\
+                    \hline
+                    Source & Method & Technique & Result \\ \hline
+                    & & & \\ \hline
+                    % 1dsdf & 2sdf & 3sdf \\
+                    % \hline
+                    % 4 & 5 & 6 \\
+                    %\hline
+                \end{tabular}
+            \end{center}
+            % \end{table}
+            
             
         \end{multicols*}
     %\end{titlingpage}
