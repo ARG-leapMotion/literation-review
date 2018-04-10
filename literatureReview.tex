@@ -10,14 +10,15 @@
 %\date{}																    % Activate to display a given date or no date
 %--------------------------------------------------------------------------------------------------------------------------------------------
 
-\documentclass[12pt, oneside]{article}										% use "amsart" instead of "article" for AMSLaTeX format
+\documentclass[journal]{IEEEtran}										    % use "amsart" instead of "article" for AMSLaTeX format
 \usepackage[showframe=false]{geometry}													    % See geometry.pdf to learn the layout options. There are lots.
 \geometry{a4paper}														    % ... or a4paper or a5paper or ... 
-\geometry{left=1.5cm,right=1.5cm,top=1cm,bottom=2cm}                        % Set margin of the paper
+\geometry{left=1.7cm,right=1.7cm,top=1.9cm,bottom=2cm}                        % Set margin of the paper
 \usepackage{graphicx}													    % Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+\graphicspath{img/}
 \usepackage{titling}
 \usepackage{blindtext}                                                      % Dummy Text
-\usepackage{multicol}                                                       % Multi column pack
+
 
 
 \title{\textbf{Animal Racing Video Game Using Hand Motion}}
@@ -26,8 +27,6 @@
 
 \begin{document}
     \maketitle														        % Title and author
-    \begin{multicols*}{2}
-    \twocolumn
     \begin{abstract}                                                        % Start Abstract here
         Nowadays, video games are among the best sources of 
         entertainment that people use to enjoy themselves together.
@@ -137,5 +136,5 @@
             
         \end{itemize}
 
-    \end{multicols*}
+
 \end{document}
