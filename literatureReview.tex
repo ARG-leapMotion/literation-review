@@ -14,7 +14,7 @@
 \usepackage[showframe=true]{geometry}										% See geometry.pdf to learn the layout options. There are lots.
 \geometry{left=1.7cm,right=1.7cm,top=1.9cm,bottom=2cm}                      % Set margin of the paper
 \usepackage[pdftex]{graphicx}													    % Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
-\graphicspath{img/}
+\graphicspath{{img/}}
 % \usepackage{blindtext}                                                      % Dummy Text
 
 
@@ -63,31 +63,94 @@
         Literation text here...
 
 
-    \section{Reference}
-        \begin{itemize}
-            \item[\textbf{[1]}] Elyoenai Guerra-Segura,Carlos M. Travieso and Jesús B. Alonso, “Study of the 
-            variability of the Leap Motion’s measures for its use to characterize air strokes”, 
-            in Measurement, Vol. 105, pp. 87-97, July 2017
+        \section{Theory}
+        In this section, we introduce the important API and ....
 
-            \item[\textbf{[2]}] Catalin Constantin Moldovan and Ionel Staretu, “An Anthropomorphic Hand with Five 
-            Fingers Controlled by a Motion Leap Device”, in Procedia Engineering, Vol. 181, 
-            pp. 575-582, 2017
+            \subsection{Leap Motion API}
+            Subsection text here...
+
+            \subsection{Camera Image API}
+                The Leap Motion controller uses infrared stereo cameras
+                as tracking sensors. You can access the images from 
+                these cameras using the \emph{Controller.images} or 
+                \emph{Frame.images} functions. These functions provide 
+                an \emph{ImageList} object, containing the Image objects. 
+                \emph{Controller.images} provides the most recent set of images. 
+                \emph{Frame.images} provides the set of images analysed to 
+                create that frame and can be slightly older than the 
+                images returned by the Controller directly. \\
+
+                % Image and caption
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=5cm]{Leap-Image-Raw}
+                    \caption{An image from one of the cameras. A grid highlighting 
+                    the significant, complex distortion is superimposed on the image.}
+                    \label{fig:leapCam1}
+                \end{figure}
+                The images can be used for:
+                \begin{itemize}
+                    \item Head-mounted display video pass-through
+                    \item Augmented reality
+                    \item Computer vision 
+                \end{itemize} 
+                The Image API provides a buffer containing the sensor brightness
+                values and a buffer containing the camera calibration map, 
+                which can be used to correct lens distortion and other optical 
+                imperfections in the image data.  \\
+
+                \begin{large}
+                    \textbf{Image Distortion}
+                \end{large}
+
+                When a ray of light enters one of the Leap Motion cameras, the 
+                lens bends the light ray so that it hits the sensor, which records 
+                it as a greyscale brightness value at a specific pixel location. 
+                Of course, no lens is perfect, so a ray of light does not land 
+                on the sensor in the optically perfect spot. The calibration 
+                map provides data to correct this imperfection, allowing you to 
+                calculate the true angle of the original ray of light. You can 
+                use the corrected angle to generate a distortion-free image, and, 
+                using the angles from both images in the stereo pair, you can 
+                triangulate the 3D location of a feature identified in both images. 
+                Note that the calibration map corrects lens distortion; it does 
+                not correct perspective distortion.
+
+        \section{Conclusion}
+            The conclusion goes here.
+
+        
+        \begin{thebibliography}{1}
+
+            \bibitem{TAG1}
+                Elyoenai Guerra-Segura,Carlos M. Travieso and Jesús B. Alonso, “Study of the 
+                variability of the Leap Motion’s measures for its use to characterize air strokes”, 
+                \emph{in Measurement}, Vol. 105, pp. 87-97, July 2017
+                
+                
+            \bibitem{TAG2}
+                Catalin Constantin Moldovan and Ionel Staretu, “An Anthropomorphic Hand with Five 
+                Fingers Controlled by a Motion Leap Device”, \emph{in Procedia Engineering}, Vol. 181, 
+                pp. 575-582, 2017
+                
+
+            \bibitem{TAG3}
+                Christianne Falcao,Ana Catarina Lemos and Marcelo Soares, “Evaluation of Natural User 
+                Interface: A Usability Study Based on the Leap Motion Device”, 
+                \emph{in Procedia Manufacturing}, Vol. 3, pp. 5490-5495, 2015
             
+            \bibitem{TAG4}
+                Dario Senkic, “Dynamic Simulations in a 3D-Environment a comparison between Maya
+                and Blender”, in Academy for technology and environment University of Gävle, 
+                September 2010
 
-            \item[\textbf{[3]}] Christianne Falcao,Ana Catarina Lemos and Marcelo Soares, “Evaluation of Natural User 
-            Interface: A Usability Study Based on the Leap Motion Device”, 
-            in Procedia Manufacturing, Vol. 3, pp. 5490-5495, 2015
-
-            \item[\textbf{[4]}] Dario Senkic, “Dynamic Simulations in a 3D-Environment a comparison between Maya
-            and Blender”, in Academy for technology and environment University of Gävle, 
-            September 2010
+            \bibitem{TAG5}
+                Darran Jamieson, “Making Difficult Fun: How to Challenge Your Players”, [Online]
+                Available: https://gamedevelopment.
+                tutsplus.com/tutorials/making-difficult-fun-how-to-challenge-your-players--cms-25873 [Accessed: May 20, 2016]
             
-
-            \item[\textbf{[5]}] Darran Jamieson, “Making Difficult Fun: How to Challenge Your Players”, [Online]
-            Available: https://gamedevelopment.
-            tutsplus.com/tutorials/making-difficult-fun-how-to-challenge-your-players--cms-25873 [Accessed: May 20, 2016]
             
-        \end{itemize}
+        \end{thebibliography}
 
 
 \end{document}
