@@ -11,22 +11,23 @@
 %--------------------------------------------------------------------------------------------------------------------------------------------
 
 \documentclass[journal]{IEEEtran}										    % use "amsart" instead of "article" for AMSLaTeX format
-\usepackage[showframe=false]{geometry}													    % See geometry.pdf to learn the layout options. There are lots.
-\geometry{a4paper}														    % ... or a4paper or a5paper or ... 
-\geometry{left=1.7cm,right=1.7cm,top=1.9cm,bottom=2cm}                        % Set margin of the paper
-\usepackage{graphicx}													    % Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+\usepackage[showframe=true]{geometry}										% See geometry.pdf to learn the layout options. There are lots.
+\geometry{left=1.7cm,right=1.7cm,top=1.9cm,bottom=2cm}                      % Set margin of the paper
+\usepackage[pdftex]{graphicx}													    % Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
 \graphicspath{img/}
-\usepackage{titling}
-\usepackage{blindtext}                                                      % Dummy Text
+% \usepackage{blindtext}                                                      % Dummy Text
 
 
 
 \title{\textbf{Animal Racing Video Game Using Hand Motion}}
-\author{Thanut Sajjakulnukit, Nutcharueta Sihirunwong, Budnampetch Onmee \\ \\
+\author{Thanut Sajjakulnukit, Nutcharueta Sihirunwong, Budnampetch Onmee \\
     \Large Kasetsart University }
 
 \begin{document}
-    \maketitle														        % Title and author
+    \markboth{Journal of \LaTeX\ Class Files,~Vol.~1, No.~8, April~2018}
+    {Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+    \maketitle
+    
     \begin{abstract}                                                        % Start Abstract here
         Nowadays, video games are among the best sources of 
         entertainment that people use to enjoy themselves together.
