@@ -24,8 +24,8 @@
     \Large Kasetsart University }
 
 \begin{document}
-    \markboth{Journal of \LaTeX\ Class Files,~Vol.~1, No.~8, April~2018}
-    {Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+    % \markboth{Journal of \LaTeX\ Class Files,~Vol.~1, No.~8, April~2018}
+    % {Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
     \maketitle
     
     \begin{abstract}                                                        % Start Abstract here
@@ -60,14 +60,95 @@
         which makes the game more challenge and interesting.
         
     \section{Literature Summary}                                            % Start literature summary here
-        Literation text here...
+        The research paper and publish experiment are related to video game 
+        technology and creating process which is the technology that we 
+        focussing on this project. The good video game should have a technique 
+        associated with the story in the video game. So, the interesting 
+        video game should make difficult fun in the video game to make a player 
+        enjoy and make difficult with other video game \cite{TAG5} using a good engine 
+        like a Unity and 3D modeling software tools to make a video game.
+
+        The 3D modeling software has a lot; however, the popular tools is a 
+        Blender and Maya \cite{TAG4}. In the research is a comparison between Maya 
+        and Blender, its focus on comparing the process of two software tools 
+        to make a group decision to choose blender for creating a model on 
+        the game because it is user-friendly like unity3D so we might not 
+        have to research from the beginner.
+
+        And the last thing can make the game interesting is a new technology 
+        that matches with our video game project. It is Leap Motion technology, 
+        it can working on the variability of the sensor \cite{TAG1} to detect hand motion 
+        and identify hand gesture, an Anthropomorphic Hand with five fingers 
+        controlled by a Motion Leap device \cite{TAG2} and evaluate of natural user 
+        interface usability based on the Leap Motion device \cite{TAG3}. All of this 
+        research focuses on the stability of the different measurements which 
+        can be produced either by the user or the sensor to be natural because 
+        it is necessary that the user has the feeling of always being in control, 
+        with minimal time and effort as possible.
 
 
-        \section{Theory}
-        In this section, we introduce the important API and ....
+        \section{Related Theory}
+        In this section, we introduce the important API, design principle and algorithm
+        that related to our project
 
             \subsection{Leap Motion API}
-            Subsection text here...
+                The Leap Motion is a new technology for a system recognizes 
+                and tracks hands and fingers. The device operates in an intimate 
+                proximity with high precision and tracking frame rate and reports 
+                discrete positions and motion. The Leap Motion controller uses 
+                optical sensors and infrared light. Detection and tracking work 
+                best when the controller has a clear, high-contrast view of an 
+                object’s silhouette.
+
+                The Leap Motion software uses an internal model of a human hand 
+                to provide predictive tracking even when parts of a hand are not 
+                visible. The hand model always provides positions for five fingers. 
+                The software uses the visible parts of the hand to send a data 
+                as a directed along the y-axis in the vertical, x- and z-axes 
+                in the horizontal plane by optical sensors and infrared light 
+                when the controller is in its standard operating position.
+
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=5cm]{Leap-Axes}
+                    \caption{The Leap Motion coordinate system.}
+                    \label{fig:leap1}
+                \end{figure}
+            
+            \subsection{Unity Scripting API}
+                Scripting is an essential ingredient in all video games. Even 
+                the simplest game needs scripts, to respond to input from 
+                the player and arrange for events in the gameplay to happen when 
+                they should. 
+
+                Our video game should be used a script to create graphical effects, 
+                used to respond to input from player, control the physical behavior 
+                of objects or even implement a custom AI system for characters 
+                in the video game.
+            
+            \subsection{Unity importing object from blender}
+                Creating beautiful and realistic object in Unity is too hard. 
+                There are many programs make modeling easier and more realistic. 
+                Blender is one of the most popular modeling 3D object program 
+                because this program is easy to use and can import model to Unity.
+
+                Unity natively imports Blender files, supporting 5 things. 
+                First is all nodes with position, rotation and scale; pivot 
+                points and names are also imported. Second is meshes with vertices, 
+                polygons, triangles, UVs, and normals. Third is bones of character 
+                or object. Fourth is skinned meshes. The last thing is animations. 
+                They also have limitation such as Blender does not export the 
+                visibility value inside animations in the FBX file. Our project 
+                use limitation and functional of Blender to modeling good object 
+                or character. We use Blender to make video game more interesting, 
+                beautiful, and realistic.
+
+            \subsection{Level Design Principle}
+                Level design is a process of constructing the experiencethat will 
+                be offered directly to the player, using components provided by 
+                the game designer.
+
+
 
             \subsection{Camera Image API}
                 The Leap Motion controller uses infrared stereo cameras
@@ -83,7 +164,7 @@
                 % Image and caption
                 \begin{figure}[h]
                     \centering
-                    \includegraphics[width=5cm]{Leap-Image-Raw}
+                    \includegraphics[width=4cm]{Leap-Image-Raw}
                     \caption{An image from one of the cameras. A grid highlighting 
                     the significant, complex distortion is superimposed on the image.}
                     \label{fig:leapCam1}
@@ -99,9 +180,7 @@
                 which can be used to correct lens distortion and other optical 
                 imperfections in the image data.  \\
 
-                \begin{large}
-                    \textbf{Image Distortion}
-                \end{large}
+                \textbf{Image Distortion}
 
                 When a ray of light enters one of the Leap Motion cameras, the 
                 lens bends the light ray so that it hits the sensor, which records 
@@ -116,8 +195,26 @@
                 Note that the calibration map corrects lens distortion; it does 
                 not correct perspective distortion.
 
-        \section{Conclusion}
-            The conclusion goes here.
+                For image correction, the distortion data can be fed to a shader 
+                program that can efficiently interpolate the correction applied to 
+                rays of light. For getting the true angle for a small set of points, 
+                you can use the \emph{Image.warp} function (but this is not efficient 
+                enough to transform a full bitmap at a high frame rate).
+
+                The distortion data is based on the angle of view of the Leap Motion 
+                cameras. The image class provides functions, \emph{Image.RayScaleX} and 
+                \emph{Image.RayScaleY} that are proportional to view angles large enough 
+                to ensure that distortion map covers the entire view, about 150 degrees 
+                for the current Leap Motion peripheral. A 150 degree angle of view means 
+                that a light ray passing through the lens has a maximum slope of 4/1.
+
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=6cm]{Leap-Image-Rays}
+                    \caption{A view angle of 150 degrees corresponds to a slope of ±4 
+                    (the tangent of 75 degrees is approximately 4)}
+                    \label{fig:leapCam2}
+                \end{figure}
 
         
         \begin{thebibliography}{1}
@@ -149,7 +246,25 @@
                 Available: https://gamedevelopment.
                 tutsplus.com/tutorials/making-difficult-fun-how-to-challenge-your-players--cms-25873 [Accessed: May 20, 2016]
             
+            \bibitem{TAG6}
+                Michael B. and David H., “Leap Motion API”, [Online] Available :
+                https://developer.leapmotion.com/documentation/csharp/devguide/Leap\textunderscore Overview.html 
+                [Accessed: April 10, 2017]
+
+            \bibitem{TAG7}
+                Unity Technologies, “Unity Scripting API”, [Online] Available :
+                https://docs.unity3d.com/Manual/ScriptingSection.html [Accessed: April 5, 2018]
             
+            \bibitem{TAG8}
+                Unity Technologies, “Importing Objects From Blender”, [Online] Available : 
+                https://docs.unity3d.com/Manual/HOWTO-ImportObjectBlender.html [Accessed: 
+                April 5, 2018]
+            
+            \bibitem{TAG9}
+                Michael B. and David H., “Camera Image”, [Online] Available : 
+                https://developer.leapmotion.com/documentation/csharp/devguide/Leap\textunderscore Images.html 
+                [Accessed: April 10, 2017]
+
         \end{thebibliography}
 
 
