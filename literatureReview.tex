@@ -11,7 +11,7 @@
 %--------------------------------------------------------------------------------------------------------------------------------------------
 
 \documentclass[journal]{IEEEtran}										    % use "amsart" instead of "article" for AMSLaTeX format
-\usepackage[showframe=true]{geometry}										% See geometry.pdf to learn the layout options. There are lots.
+\usepackage[showframe=false]{geometry}										% See geometry.pdf to learn the layout options. There are lots.
 \geometry{left=1.7cm,right=1.7cm,top=1.9cm,bottom=2cm}                      % Set margin of the paper
 \usepackage[pdftex]{graphicx}													    % Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
 \graphicspath{{img/}}
@@ -110,7 +110,7 @@
 
                 \begin{figure}[h]
                     \centering
-                    \includegraphics[width=5cm]{Leap-Axes}
+                    \includegraphics[width=6cm]{Leap-Axes}
                     \caption{The Leap Motion coordinate system.}
                     \label{fig:leap1}
                 \end{figure}
@@ -147,6 +147,53 @@
                 Level design is a process of constructing the experiencethat will 
                 be offered directly to the player, using components provided by 
                 the game designer.
+
+                Universal level design principle consist of 8 important rule that 
+                guide game design that are:
+
+                \begin{itemize}
+                    \item   Game need to have tutorial level in order to make sure that 
+                    player know how to play and explain the game interface, key 
+                    challenges, and action
+                
+                    \item   Pacing of a level refers to the frequency at which the 
+                    player encounters individual challenges. A fast pace can be 
+                    create stress, offering challenge at a rapid rate
+
+                    \item   Providing more resource, When the player surmounts a 
+                    challenge that consumes his 	resources, provide more resource.
+                    The player should not face another demanding challenge immediately 
+                    after the player surmount a challenge that costs him a lot of resources
+                    
+                    \item   Avoid conceptual non-sequiturs creator should consider 
+                    to build things that make sense. Don’t put dangers or reward 
+                    in places in which no sane person could possibly expect to find them
+                    
+                    \item   Short-term goal creator should Clearly inform the player 
+                    of his short-term goal and Should never leave your character 
+                    wondering what to do next, the current or next short-term goal 
+                    should be obvious
+                    
+                    \item   Be clear with risk, reward and then consequences of decisions. 
+                    Player should not necessarily know every detail of what 
+                    consequences his decisions will produce, the player should be 
+                    able to make a reasonable guess based on the context.
+
+                    \item   Skills, imagination, intelligence and dedication distinguish 
+                    a good player. Good players deserve to be rewarded
+
+                    \item   Primary objective is to give players an enjoyable experience. 
+                    Build more rewards in to level than punishments
+
+                    \item   The purpose of an artificial opponent is to put up a good 
+                    fight and then lose Design level so that the player will get better 
+                    and better at overcoming the challenges until he succeeds at all of them
+
+                    \item Accessible to a wider audience by allowing them to switch the difficulty 
+                    of your game to easy, normal or hard setting. And Be able to tweak the numbers 
+                    to adjust the difficulty to accommodate the player’s preference
+
+                \end{itemize}
 
 
 
@@ -210,7 +257,7 @@
 
                 \begin{figure}[h]
                     \centering
-                    \includegraphics[width=6cm]{Leap-Image-Rays}
+                    \includegraphics[width=5cm]{Leap-Image-Rays}
                     \caption{A view angle of 150 degrees corresponds to a slope of ±4 
                     (the tangent of 75 degrees is approximately 4)}
                     \label{fig:leapCam2}
@@ -248,7 +295,8 @@
             
             \bibitem{TAG6}
                 Michael B. and David H., “Leap Motion API”, [Online] Available :
-                https://developer.leapmotion.com/documentation/csharp/devguide/Leap\textunderscore Overview.html 
+                https://developer.leapmotion.com/documentation/csharp/devguide/ \\
+                Leap\textunderscore Overview.html 
                 [Accessed: April 10, 2017]
 
             \bibitem{TAG7}
@@ -257,12 +305,16 @@
             
             \bibitem{TAG8}
                 Unity Technologies, “Importing Objects From Blender”, [Online] Available : 
-                https://docs.unity3d.com/Manual/HOWTO-ImportObjectBlender.html [Accessed: 
-                April 5, 2018]
-            
+                https://docs.unity3d.com/Manual/HOWTO-ImportObjectBlender.html [Accessed: April 5, 2018]
+
             \bibitem{TAG9}
+                "General Principle of Level Design", [Online] Available :
+                www.cas.mcmaster.ca/~se3gb3/SE3GB3/2014/slides/Chapter12.pptx
+            
+            \bibitem{TAG10}
                 Michael B. and David H., “Camera Image”, [Online] Available : 
-                https://developer.leapmotion.com/documentation/csharp/devguide/Leap\textunderscore Images.html 
+                https://developer.leapmotion.com/documentation/csharp/devguide/ \\
+                Leap\textunderscore Images.html 
                 [Accessed: April 10, 2017]
 
         \end{thebibliography}
