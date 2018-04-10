@@ -10,107 +10,59 @@
 %\date{}																    % Activate to display a given date or no date
 %--------------------------------------------------------------------------------------------------------------------------------------------
 
-\documentclass[12pt, oneside]{article}										% use "amsart" instead of "article" for AMSLaTeX format
-\usepackage[showframe=false]{geometry}													    % See geometry.pdf to learn the layout options. There are lots.
-\geometry{a4paper}														    % ... or a4paper or a5paper or ... 
-\geometry{left=1.5cm,right=1.5cm,top=1cm,bottom=2cm}                        % Set margin of the paper
-\usepackage{graphicx}													    % Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
-\usepackage{titling}
-\usepackage{blindtext}                                                      % Dummy Text
-\usepackage{multicol}                                                       % Multi column pack
+\documentclass[journal]{IEEEtran}										    % use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[showframe=true]{geometry}										% See geometry.pdf to learn the layout options. There are lots.
+\geometry{left=1.7cm,right=1.7cm,top=1.9cm,bottom=2cm}                      % Set margin of the paper
+\usepackage[pdftex]{graphicx}													    % Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+\graphicspath{img/}
+% \usepackage{blindtext}                                                      % Dummy Text
+
 
 
 \title{\textbf{Animal Racing Video Game Using Hand Motion}}
-\author{Thanut Sajjakulnukit, Nutcharueta Sihirunwong, Budnampetch Onmee \\ \\
+\author{Thanut Sajjakulnukit, Nutcharueta Sihirunwong, Budnampetch Onmee \\
     \Large Kasetsart University }
 
 \begin{document}
-    \maketitle														        % Title and author
-    \begin{multicols*}{2}
-    \twocolumn
+    \markboth{Journal of \LaTeX\ Class Files,~Vol.~1, No.~8, April~2018}
+    {Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+    \maketitle
+    
     \begin{abstract}                                                        % Start Abstract here
-        Nowadays, video games are among the best sources of 
-        entertainment that people use to enjoy themselves together.
-        In addition to the entertainment, the player will also gain 
-        knowledge or skills depending on the purpose of the game’s 
-        creators. Leap Motion technology is used in order to 
-        present new ways for players to interact with our video 
-        game, as well as provide more satisfying experiences for 
-        everybody involved. Moreover, leap motion can increase 
-        challenging in game and also help players are really into 
-        controlling character in game. We  develop a new kind of 
-        game which uses your own hands to control the character 
-        movements via different gestures. This project is not 
-        nly for entertainment, but also for the illustrations 
-        of animal mechanisms so that kids can learn. This 
-        project also lets people participate in some 
-        activities together.
+        Nowadays, video games are among the best sources of entertainment 
+        that people use to enjoy themselves together. In addition to the 
+        entertainment, the player will also gain knowledge or skills 
+        depending on the purpose of the game’s creators. We  develop a new 
+        kind of game that uses Leap Motion to detect your own hands and 
+        control the character movements via different gestures. 
+        The Leap Motion will make game more fun, challenge, and interesting. 
+        This project is not only for entertainment, but also for the 
+        illustrations of animal mechanisms so that kids can learn. 
+        This project also lets people participate in some activities together.
 
     \end{abstract}
 
     \section{Introduction}                                                  % Start Introduction here
-    Currently, the social condition makes a pressure on people’s 
-    stress. Video games are one of the answers to help relieve 
-    stress. Today there are many developers who created the video 
-    game in the market but it doesn't have a new technology to make 
-    a different video game. Leap Motion is one of technology that 
-    can be used with the game. It is hand tracking technology is 
-    designed to be embedded directly into VR/AR headset. \\
+        \IEEEPARstart{C}{urrently}, the social condition makes a pressure 
+        on people’s stress. Video games are one of the answers to help relieve 
+        stress. Today there are many developers who created the video 
+        game in the market but it doesn't have a new technology to make 
+        a different video game. Leap Motion is one of technology that 
+        can be used with the game. It is hand tracking technology is 
+        designed to be embedded directly into VR/AR headset. 
 
-    In this project, we will use Leap Motion technology, one of
-    the new technology that use virtual hand to control object
-    in video game. To create a racing video game by tracking 
-    hand to control character’s movement depending on the 
-    physical characteristic of each animal. The movement of 
-    character in the game is related to movement of the hand 
-    which makes the game more challenge and interesting.
-    
+        In this project, we will use Leap Motion technology, one of
+        the new technology that use virtual hand to control object
+        in video game. To create a racing video game by tracking 
+        hand to control character’s movement depending on the 
+        physical characteristic of each animal. The movement of 
+        character in the game is related to movement of the hand 
+        which makes the game more challenge and interesting.
         
     \section{Literature Summary}                                            % Start literature summary here
+        Literation text here...
 
-    The research paper and publish experiment are related to video game 
-    technology and creating process which is the technology that we 
-    focussing in this project. \\
 
-    First, the experiment which is working 
-    on the variability of the sensor. Then the following is research 
-    about detect hand motion and identify hand gesture[1] based on 
-    the evaluation of the temporal variability of the strokes. It 
-    shows some differences between the stability of the different 
-    measurements which can be produced either by the user or the 
-    sensor. \\
-
-    Second, An Anthropomorphic Hand with Five Fingers 
-    Controlled by a Motion Leap Device research[2] test leap motion 
-    for capturing the movements of a human hand's fingers in different 
-    configurations. Then create software to facilitate interaction 
-    between a human hand. It conclude that object recognition has 
-    a high accuracy rate where contrast between the object and its 
-    background is high. \\
-    
-    Third, “Evaluate of natural user interface 
-    usability based on the Leap Motion device” focus on users expressed 
-    disappointment with the device. Some user state that, for the 
-    experience in fact be "natural", it is necessary that the user has 
-    the feeling of always being in control, with minimal time and 
-    effort as possible. \\
-    
-    Fourth, the “Dynamic Simulations in a 3D-Environment 
-    a comparison between Maya and Blender” research [4] is focussing on 
-    software tools for creating 3D modeling by comparing process of two 
-    software tools. So In our project we choose blender for creating model 
-    on the game because it is user friendly like unity3D so we might not have 
-    to research from the beginner. \\
-    
-    Last, the article describes making 
-    difficult fun in the video game to make a player enjoy and make difficult 
-    with other video game [5].It show making a game challenge include a choice 
-    of difficulties easy or hard can make everyone can enjoy a video game. 
-    There exists the possibility to design a video game for all skill 
-    levels: where a crossover of players can enjoy the game without 
-    being forced into a particular path.
-
-    
     \section{Reference}
         \begin{itemize}
             \item[\textbf{[1]}] Elyoenai Guerra-Segura,Carlos M. Travieso and Jesús B. Alonso, “Study of the 
@@ -137,5 +89,5 @@
             
         \end{itemize}
 
-    \end{multicols*}
+
 \end{document}
