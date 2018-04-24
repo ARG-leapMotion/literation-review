@@ -16,7 +16,7 @@
 \usepackage[pdftex]{graphicx}													    % Use pdf, png, jpg, or epsÂ§ with pdflatex; use eps in DVI mode
 \graphicspath{{img/}}
 % \usepackage{blindtext}                                                      % Dummy Text
-
+\usepackage{hyperref}                                                       % Link to Reference 
 
 
 \title{\textbf{Animal Racing Video Game Using Hand Motion}}
@@ -89,7 +89,7 @@
 
         \section{Related Theory}
         In this section, we introduce the important API, design principle and algorithm
-        that related to our project
+        that related to our project.
 
             \subsection{Leap Motion API}
                 The Leap Motion is a new technology for a system recognizes 
@@ -111,7 +111,7 @@
                 \begin{figure}[h]
                     \centering
                     \includegraphics[width=6cm]{Leap-Axes}
-                    \caption{The Leap Motion coordinate system.}
+                    \caption{The Leap Motion coordinate system. \cite{TAG11}}
                     \label{fig:leap1}
                 \end{figure}
             
@@ -213,7 +213,7 @@
                     \centering
                     \includegraphics[width=4cm]{Leap-Image-Raw}
                     \caption{An image from one of the cameras. A grid highlighting 
-                    the significant, complex distortion is superimposed on the image.}
+                    the significant, complex distortion is superimposed on the image. \cite{TAG12}}
                     \label{fig:leapCam1}
                 \end{figure}
                 The images can be used for:
@@ -259,7 +259,7 @@
                     \centering
                     \includegraphics[width=5cm]{Leap-Image-Rays}
                     \caption{A view angle of 150 degrees corresponds to a slope of Â±4 
-                    (the tangent of 75 degrees is approximately 4)}
+                    (The tangent of 75 degrees is approximately 4) \cite{TAG13}}
                     \label{fig:leapCam2}
                 \end{figure}
 
@@ -316,6 +316,22 @@
                 https://developer.leapmotion.com/documentation/csharp/devguide/ \\
                 Leap\textunderscore Images.html 
                 [Accessed: April 10, 2017]
+             
+             \bibitem{TAG11}
+                Michael B. and David H., â Leap Axesâ, [Online] Available : 
+                https://di4564baj7skl.cloudfront.net/documentation/images/Leap\textunderscore Axes.png
+                [Accessed: April 10, 2017]
+                
+                \bibitem{TAG12}
+                Michael B. and David H., â Leap Image Rawâ, [Online] Available : 
+                https://di4564baj7skl.cloudfront.net/documentation/images/Leap\textunderscore Image\textunderscore Raw.png
+                [Accessed: April 10, 2017]
+                
+                \bibitem{TAG13}
+                Michael B. and David H., â Leap Image Raysâ, [Online] Available : 
+                https://di4564baj7skl.cloudfront.net/documentation/images/Leap\textunderscore Image\textunderscore Rays.png 
+                [Accessed: April 10, 2017]
+	
 
         \end{thebibliography}
 
